@@ -1,0 +1,7 @@
+order_id,customer_name,order_date,product,quantity,price
+101,John Smith,2026-01-10,Laptop,1,1200.00
+102,mary johnson,2026/01/11,Mouse,2,25.50
+103,,2026-01-12,Keyboard,1,45.00
+104,Bob Lee,2026-01-12,Monitor,1,300.00
+102,mary johnson,2026/01/11,Mouse,2,25.50
+105,Alice Brown,01-13-2026,Headphones,3,80.00

@@ -1,0 +1,28 @@
+import pandas as pd
+
+print("1. Reading raw data...")
+df = pd.read_csv('raw_data.csv')
+
+print("\n--- BEFORE CLEANING ---")
+print(df)
+
+# 2. Data Cleaning Steps
+# A. Remove duplicate rows
+df = df.drop_duplicates()
+
+# B. Handle missing values (fill missing customer names with 'Unknown')
+df['customer_name'] = df['customer_name'].fillna('Unknown')
+
+# C. Standardize text format (make customer names Title Case)
+df['customer_name'] = df['customer_name'].str.title()
+
+# D. Standardize date format using mixed format support
+df['order_date'] = pd.to_datetime(df['order_date'], format='mixed').dt.strftime('%Y-%m-%d')
+
+print("\n--- AFTER CLEANING ---")
+print(df)
+
+
+
+
+
